@@ -302,3 +302,52 @@ a {
     transform: scale(1.03);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.activites {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.activites h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.activites-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.activite {
+    width: 500px;
+    text-align: center;
+}
+
+.activite-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.activite h2 {
+    font-size: 26px;
+    margin: 15px 0;
+}
+
+.activite p {
+    font-size: 16px;
+    line-height: 1.6;
+}
