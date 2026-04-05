@@ -1,14 +1,21 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
 }
+
+/* NAVBAR */
 
 .navbar {
     position: fixed;
@@ -27,7 +34,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 65px;
 }
 
 .nav-links {
@@ -58,10 +65,13 @@ body {
     width: 100%;
 }
 
+/* HERO */
+
 .hero {
-    height: 100vh;
+    min-height: calc(100vh - 80px);
     background: url("assets/images/IMG_9591.png") no-repeat center/cover;
     position: relative;
+    display: flex;
 }
 
 .overlay {
@@ -81,11 +91,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    width: 100%;
 }
 
 .hero-logo {
-    width: 120px;
+    width: 180px;
     margin-bottom: 20px;
 }
 
@@ -94,6 +104,7 @@ body {
 }
 
 /* ICONES */
+
 .socials {
     margin-top: 20px;
 }
@@ -107,6 +118,13 @@ body {
 .icon:hover {
     transform: scale(1.1);
 }
+
+.socials a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* EQUIPE */
 
 .equipe {
     text-align: center;
@@ -132,35 +150,17 @@ body {
 
 .member img {
     width: 150px;
-    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 15px;
 }
 
 .member:hover {
     transform: translateY(-10px);
 }
 
-a {
-    outline: none;
-}
-
-.socials a {
-    text-decoration: none;
-    display: inline-block;
-}.socials a {
-    text-decoration: none;
-    display: inline-block;
-}
-
-.logo img {
-    height: 65px; /* avant 50 → plus visible */
-}
-
-.hero-logo {
-    width: 180px; /* avant 120 */
-    margin-bottom: 20px;
-}
-
-/* PAGE PARTENAIRES */
+/* PARTENAIRES */
 
 .partenaires {
     text-align: center;
@@ -201,10 +201,56 @@ a {
 .logos-container img:hover {
     transform: scale(1.1);
 }
-.member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 15px;
+
+/* FOOTER */
+
+.footer {
+    background: #6081cf;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: auto; /* 🔥 clé pour coller en bas */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-left p {
+    margin-right: 10px;
+}
+
+.footer-icon {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-center a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-center a:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    font-weight: bold;
+}
+
+a {
+    outline: none;
+}
+
+.logos-container a {
+    display: inline-block;
 }
