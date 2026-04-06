@@ -5,79 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partenariats - RTI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo_rti_transparent.png">
 </head>
 
 <body>
 
 <header>
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <img src="assets/images/logo_rti_transparent.png">
-        </a>
+        <div class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo_rti_transparent.png">
+                <span class="logo-text">Racing Team ISEP</span>
+            </a>
+        </div>
 
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="equipe.html">Équipe</a></li>
-            <li><a href="#">Activités</a></li>
+            <li><a href="activites.html">Activités</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="partenaires.html">Partenaires</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="partenaires">
-    <h1>PARTENARIATS</h1>
+<section class="partners-section">
+
+    <h1>Nos partenaires</h1>
     <div class="ligne"></div>
-    <h2>Ils nous font déjà confiance</h2>
+    <p class="intro">
+        Ils accompagnent le développement de la Racing Team ISEP et contribuent à nos projets et compétitions.
+    </p>
 
-    <div class="logos-container">
+    <!-- PARTENAIRES MAJEURS -->
+    <h2 class="category-title">Partenaires majeurs</h2>
 
-    <!-- CVEC -->
-    <a href="https://cvec.etudiant.gouv.fr/" target="_blank">
-        <img src="assets/images/CVEC1_signature_rvb.png">
-    </a>
+    <div class="partners-grid">
 
-    <!-- ISEP -->
-    <a href="https://www.isep.fr/" target="_blank">
-        <img src="assets/images/Institut_supérieur_d'électronique_de_Paris.svg.png">
-    </a>
+        <a href="https://cvec.etudiant.gouv.fr/" target="_blank" class="partner-card">
+            <img src="assets/images/CVEC1_signature_rvb.png">
+            <h3>CVEC</h3>
+            <p>Contribution financière permettant de soutenir la participation de la Racing Team ISEP à des compétitions inter-universitaires, notamment les 6H EMOS.</p>
+        </a>
 
-    <!-- REDBULL -->
-    <a href="https://www.redbull.com/fr-fr/energydrink" target="_blank">
-        <img src="assets/images/Copie_de_Partenariat_officiel-removebg-preview.png">
-    </a>
-
-    <!-- AS ISEP -->
-    <a href="https://www.instagram.com/as.isep/" target="_blank">
-        <img src="assets/images/Capture_d_écran_2025-11-24_143146-removebg-preview (1).png">
-    </a>
+        <a href="https://www.isep.fr/" target="_blank" class="partner-card">
+            <img src="assets/images/Institut_supérieur_d'électronique_de_Paris.svg.png">
+            <h3>ISEP</h3>
+            <p>L’ISEP nous aide à organiser nos événements en mettant à disposition des salles, du matériel et des créneaux. L’école nous donne aussi de la visibilité.</p>
+        </a>
 
     </div>
+
+    <!-- PARTENAIRES TECHNIQUES -->
+    <h2 class="category-title">Partenaires techniques</h2>
+
+    <div class="partners-grid">
+
+        <a href="https://www.redbull.com/fr-fr/energydrink" target="_blank" class="partner-card">
+            <img src="assets/images/Copie_de_Partenariat_officiel-removebg-preview.png">
+            <h3>Red Bull</h3>
+            <p>Red Bull nous accompagne lors de nos événements en mettant à disposition des canettes et en nous donnant l’opportunité de participer à des initiatives comme le Red Bull Basement.</p>
+        </a>
+
+    </div>
+
+    <!-- SOUTIENS -->
+    <h2 class="category-title">Soutiens</h2>
+
+    <div class="partners-grid">
+
+        <a href="https://www.instagram.com/as.isep/" target="_blank" class="partner-card">
+            <img src="assets/images/Capture_d_écran_2025-11-24_143146-removebg-preview (1).png">
+            <h3>AS ISEP</h3>
+            <p>L’AS ISEP nous accompagne dans la communication et la gestion financière de l’association.</p>
+        </a>
+
+    </div>
+
 </section>
 
-<footer class="footer">
-    <!-- même footer -->
-    <div class="footer-left">
-        <p>Suivez-nous</p>
-        <a href="https://www.instagram.com/racingteamisep/" target="_blank">
-            <img src="assets/images/Instagram_icon.png" class="footer-icon">
-        </a>
-        <a href="https://iseplife.fr/club/378238" target="_blank">
-            <img src="assets/images/icon.svg" class="footer-icon">
-        </a>
-        <a href="mailto:racingteamisep@gmail.com">
-            <img src="assets/images/Gmail-Embleme.png" class="footer-icon">
-        </a>
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Devenir partenaire</h2>
+    <p>Vous souhaitez soutenir la Racing Team ISEP et participer à notre développement ?</p>
+    <a href="contact.html" class="cta-button">Nous contacter</a>
+</section>
+
+<!-- NOUVEAU FOOTER MODERNE -->
+
+<footer class="footer-modern">
+
+    <div class="footer-container">
+
+        <!-- COLONNE 1 -->
+        <div class="footer-col">
+            <h3>Suivez-nous</h3>
+            <div class="footer-icons">
+                <a href="https://instagram.com/racingteamisep" target="_blank">
+                    <img src="assets/images/Instagram_icon.png">
+                </a>
+                <a href="https://iseplife.fr/club/378238" target="_blank">
+                    <img src="assets/images/icon.svg">
+                </a>
+            </div>
+        </div>
+
+        <!-- COLONNE 2 -->
+        <div class="footer-col">
+            <h3>Contact</h3>
+
+            <div class="footer-contact">
+                <img src="assets/images/Mail_(Apple)_logo.png">
+                <p>
+                    <a href="mailto:racingteamisep@gmail.com">
+                        racingteamisep@gmail.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div class="footer-col">
+            <h3>Racing Team ISEP</h3>
+            <p>Association de sport automobile</p>
+        </div>
+
     </div>
 
-    <div class="footer-center">
-        <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+        © 2026 Racing Team ISEP
     </div>
 
-    <div class="footer-right">
-        <p>Racing Team ISEP</p>
-    </div>
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - RTI</title>
+    <title>Galerie - RTI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header>
     <nav class="navbar">
         <div class="logo">
@@ -29,66 +30,67 @@
     </nav>
 </header>
 
-<section class="contact-section">
+<!-- TITLE -->
+<section class="gallery-header">
+    <h1>Galerie</h1>
+    <p>6H EMOS – Racing Team ISEP</p>
+</section>
 
-    <h1>Contact</h1>
-    <p class="contact-subtitle">N'hésitez pas à nous contacter !</p>
+<!-- GALLERY -->
+<section class="gallery">
 
-    <div class="contact-grid">
-
-        <!-- Alexandre -->
-        <div class="contact-card-premium">
-            <img src="assets/images/Photo Alexandre SINTES-4.png">
-            <h3>Alexandre SINTES</h3>
-            <span>Président</span>
-
-            <p>📞 07 87 03 43 53</p>
-            <p>alexandre.sintes@eleve.isep.fr</p>
-        </div>
-
-        <!-- Guillaume -->
-        <div class="contact-card-premium">
-            <img src="assets/images/DYdpMOl051f90jD3j2ASxy3CYZE4ZY.webp">
-            <h3>Guillaume MARLE</h3>
-            <span>Secrétaire Général</span>
-
-            <p>📞 06 52 58 38 13</p>
-            <p>guillaume.marle@eleve.isep.fr</p>
-        </div>
-
-        <!-- Louis -->
-        <div class="contact-card-premium">
-            <img src="assets/images/1736345658719.jpg">
-            <h3>Louis DESJOUIS</h3>
-            <span>Pôle Logistique</span>
-
-            <p>📞 07 68 68 88 53</p>
-            <p>louis.desjouis@eleve.isep.fr</p>
-        </div>
-
-    </div>
+    <img src="assets/images/1.png" class="gallery-img">
+    <img src="assets/images/2IMG_9440.png" class="gallery-img">
+    <img src="assets/images/3IMG_9623.png" class="gallery-img">
+    <img src="assets/images/4IMG_0073.png" class="gallery-img">
+    <img src="assets/images/5IMG_0086.png" class="gallery-img">
+    <img src="assets/images/6IMG_9818.png" class="gallery-img">
+    <img src="assets/images/7IMG_9827.png" class="gallery-img">
+    <img src="assets/images/8IMG_9494.png" class="gallery-img">
+    <img src="assets/images/9IMG_9530.png" class="gallery-img">
+    <img src="assets/images/10IMG_9564.png" class="gallery-img">
+    <img src="assets/images/11IMG_9423.png" class="gallery-img">
+    <img src="assets/images/12IMG_9536.png" class="gallery-img">
+    <img src="assets/images/13IMG_9452.png" class="gallery-img">
+    <img src="assets/images/14MG_9587 (1).png" class="gallery-img">
+    <img src="assets/images/15IMG_9473.png" class="gallery-img">
+    <img src="assets/images/16IMG_9570.png" class="gallery-img">
+    <img src="assets/images/17IMG_9907.png" class="gallery-img">
+    <img src="assets/images/18IMG_9470.png" class="gallery-img">
+    <img src="assets/images/19IMG_9583.png" class="gallery-img">
+    <img src="assets/images/20IMG_9593 (1).png" class="gallery-img">
 
 </section>
 
-<!-- LOCALISATION -->
-<section class="map-section">
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
 
-    <h2>Où nous trouver ?</h2>
+<script>
+const images = document.querySelectorAll('.gallery-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const close = document.querySelector('.close');
 
-    <a href="https://www.google.com/maps?q=28+Rue+Notre+Dame+des+Champs+75006+Paris" target="_blank">
-        <img src="assets/images/map.png" class="map-premium">
-    </a>
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
 
-    <p class="address">28 Rue Notre Dame des Champs, 75006 Paris</p>
+close.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+});
 
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-    <h2>Rejoindre la Racing Team ISEP</h2>
-    <p>Envie de participer à nos projets et compétitions ? Contactez-nous dès maintenant !</p>
-    <a href="mailto:racingteamisep@gmail.com" class="cta-button">Nous écrire</a>
-</section>
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+    }
+});
+</script>
 
 <!-- NOUVEAU FOOTER MODERNE -->
 

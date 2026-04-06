@@ -5,83 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Racing Team ISEP</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo_rti_transparent.png">
 </head>
+
+
 
 <body>
 
 <header>
     <nav class="navbar">
         <div class="logo">
-    <a href="index.html" class="logo-link">
-        <img src="assets/images/logo_rti_transparent.png">
-        <span class="logo-text">Racing Team ISEP</span>
-    </a>
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo_rti_transparent.png" alt="Logo RTI">
+                <span class="logo-text">Racing Team ISEP</span>
+            </a>
         </div>
 
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="equipe.html">Équipe</a></li>
             <li><a href="activites.html">Activités</a></li>
-            <li><a href="#">Galerie 6H EMOS</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="partenaires.html">Partenaires</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="hero">
     <div class="overlay"></div>
 
     <div class="hero-content">
-        <img src="assets/images/logo_rti_transparent.png" class="hero-logo">
+        <img src="assets/images/logo_rti_transparent.png" class="hero-logo" alt="Logo Racing Team ISEP">
 
         <h1>Racing Team ISEP</h1>
 
-        <h4>Student Motorsport Association of ISEP Paris<br>
-        Intra-ISEP & inter-univ karting GP | Kart creation : mechanics, electronics & software</h4>
+        <p class="hero-subtitle">
+            Association de sport automobile de l’ISEP
+        </p>
+
+        <div class="hero-buttons">
+            <a href="contact.html" class="hero-btn hero-btn-primary">Rejoindre l’équipe</a>
+            <a href="activites.html" class="hero-btn hero-btn-secondary">Découvrir nos activités</a>
+            <a href="partenaires.html" class="hero-btn hero-btn-secondary">Nos partenaires</a>
+        </div>
 
         <div class="socials">
             <a href="https://www.instagram.com/racingteamisep/" target="_blank">
-                <img src="assets/images/Instagram_icon.png" class="icon">
+                <img src="assets/images/Instagram_icon.png" class="icon" alt="Instagram">
             </a>
 
             <a href="https://iseplife.fr/club/378238" target="_blank">
-                <img src="assets/images/icon.svg" class="icon">
+                <img src="assets/images/icon.svg" class="icon" alt="ISEP Life">
             </a>
 
             <a href="mailto:racingteamisep@gmail.com">
-                <img src="assets/images/Mail_(Apple)_logo.png" class="icon">
+                <img src="assets/images/Mail_(Apple)_logo.png" class="icon" alt="Mail">
             </a>
         </div>
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-left">
-        <p>Suivez-nous</p>
+<!-- NOUVEAU FOOTER MODERNE -->
 
-        <a href="https://www.instagram.com/racingteamisep/" target="_blank">
-            <img src="assets/images/Instagram_icon.png" class="footer-icon">
-        </a>
+<footer class="footer-modern">
 
-        <a href="https://iseplife.fr/club/378238" target="_blank">
-            <img src="assets/images/icon.svg" class="footer-icon">
-        </a>
+    <div class="footer-container">
 
-        <a href="mailto:racingteamisep@gmail.com">
-            <img src="assets/images/Gmail-Embleme.png" class="footer-icon">
-        </a>
+        <!-- COLONNE 1 -->
+        <div class="footer-col">
+            <h3>Suivez-nous</h3>
+            <div class="footer-icons">
+                <a href="https://instagram.com/racingteamisep" target="_blank">
+                    <img src="assets/images/Instagram_icon.png">
+                </a>
+                <a href="https://iseplife.fr/club/378238" target="_blank">
+                    <img src="assets/images/icon.svg">
+                </a>
+            </div>
+        </div>
+
+        <!-- COLONNE 2 -->
+        <div class="footer-col">
+            <h3>Contact</h3>
+
+            <div class="footer-contact">
+                <img src="assets/images/Mail_(Apple)_logo.png">
+                <p>
+                    <a href="mailto:racingteamisep@gmail.com">
+                        racingteamisep@gmail.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div class="footer-col">
+            <h3>Racing Team ISEP</h3>
+            <p>Association de sport automobile</p>
+        </div>
+
     </div>
 
-    <div class="footer-center">
-        <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+        © 2026 Racing Team ISEP
     </div>
 
-    <div class="footer-right">
-        <p>Racing Team ISEP</p>
-    </div>
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>

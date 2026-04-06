@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Activités - RTI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/images/logo_rti_transparent.png">
 </head>
 
 <body>
@@ -21,60 +22,183 @@
             <li><a href="index.html">Accueil</a></li>
             <li><a href="equipe.html">Équipe</a></li>
             <li><a href="activites.html">Activités</a></li>
-            <li><a href="#">Galerie 6H EMOS</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="partenaires.html">Partenaires</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="activites">
-    <h1>Activités</h1>
+<!-- HERO -->
+<section class="activites-hero">
+    <h1>Nos Activités</h1>
+    <p>Découvrez les événements et projets de la Racing Team ISEP</p>
+</section>
 
-    <div class="activites-container">
+<!-- CARTES -->
+<section class="activites-cards">
 
-        <!-- ACTIVITÉ 1 -->
-        <div class="activite">
-            <img src="assets/images/affiche_6h_EMOS_RTI.png" class="activite-img">
+    <!-- 6H EMOS -->
+    <div class="card">
+        <img src="assets/images/affiche_6h_EMOS_RTI.png">
+        <div class="card-content">
             <h2>6H EMOS</h2>
+            <button onclick="openPopup('emos')">Voir plus</button>
+        </div>
+    </div>
 
-            <p>
-            La Racing Team ISEP participera aux 6H EMOS, une course d’endurance inter-universitaire organisée par ESTACA Motorsport au circuit RKC Karting.<br><br>
+    <!-- RED BULL -->
+    <div class="card">
+        <img src="assets/images/red-bull-basement-silicon-valley.avif">
+        <div class="card-content">
+            <h2>Red Bull Basement</h2>
+            <button onclick="openPopup('redbull')">Voir plus</button>
+        </div>
+    </div>
 
-            Chaque école dispose d’un châssis. La Racing Team ISEP représentera l’ISEP avec un châssis composé de 6 pilotes.<br><br>
+</section>
 
-            28 mars 2026<br>
-            13h – 21h<br>
-            Circuit RKC Karting<br><br>
+<!-- POPUP 6H EMOS -->
+<div id="popup-emos" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('emos')">&times;</span>
 
-            La course comprend 40 minutes de qualifications suivies de 6 heures de course d’endurance.<br>
-            La course sera également rediffusée sur Twitch.<br><br>
+        <img src="assets/images/brochure_6H_EMOS.png" class="popup-img">
 
-            L’équipe gagnante se verra rembourser son châssis et de nombreux lots sont à gagner.<br><br>
+        <h2>6H EMOS</h2><br>
 
-            Seulement 6 places disponibles.<br>
-            Tarif : 35 € par personne.<br><br>
+        <p><strong>La Racing Team ISEP aux 6H EMOS</strong></p><br>
 
-            Les Isépiens sont également invités à venir soutenir les pilotes le jour de la course.<br><br>
+        <p>
+        La Racing Team ISEP a participé aux 6H EMOS, une course d’endurance inter-universitaire organisée par ESTACA Motorsport sur le circuit RKC Karting.
+        </p><br>
 
-            Par ailleurs, notre partenaire Red Bull sera présent à l’événement (distribution de canettes).<br><br>
+        <ul>
+            <li>Date : 28 mars 2026</li>
+            <li>Horaires : 13h – 21h</li>
+            <li>Lieu : Circuit RKC Karting</li>
+        </ul><br>
 
-            Billetterie bientôt disponible sur l’Instagram de la RTI : @racingteamisep
-            </p>
+        <p>
+        40 minutes de qualifications suivies de 6 heures de course d’endurance.  
+        Événement retransmis sur Twitch.
+        </p><br>
+
+        <ul>
+            <li>6 places disponibles</li>
+            <li>Tarif : 35 €</li>
+        </ul><br>
+
+        <p>
+        Présence de Red Bull avec distribution de canettes.  
+        Cette première course inter-universitaire restera un moment marquant pour la RTI.
+        </p><br>
+
+    </div>
+</div>
+
+<!-- POPUP RED BULL -->
+<div id="popup-redbull" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('redbull')">&times;</span>
+
+        <h2>Red Bull Basement</h2><br>
+
+        <p>
+        La Racing Team ISEP a relayé l’initiative Red Bull Basement, un programme international dédié aux étudiants qui souhaitent développer des projets innovants.
+        </p><br>
+
+        <ul>
+            <li>Date limite : 19 avril</li>
+            <li>Ouvert aux étudiants</li>
+            <li>Soumission d’un projet innovant</li>
+        </ul><br>
+
+        <p>
+        Un jury sélectionnera la meilleure idée pour représenter la France à la finale internationale à la Silicon Valley.
+        </p><br>
+
+        <p>
+        <a href="https://www.redbull.com/fr-fr/events/red-bull-basement-france-2026" target="_blank">
+            Accéder à l’événement
+        </a>
+        </p>
+
+    </div>
+</div>
+
+<script>
+function openPopup(type) {
+    document.getElementById("popup-" + type).style.display = "flex";
+}
+
+function closePopup(type) {
+    document.getElementById("popup-" + type).style.display = "none";
+}
+</script>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+
+<!-- NOUVEAU FOOTER MODERNE -->
+
+<footer class="footer-modern">
+
+    <div class="footer-container">
+
+        <!-- COLONNE 1 -->
+        <div class="footer-col">
+            <h3>Suivez-nous</h3>
+            <div class="footer-icons">
+                <a href="https://instagram.com/racingteamisep" target="_blank">
+                    <img src="assets/images/Instagram_icon.png">
+                </a>
+                <a href="https://iseplife.fr/club/378238" target="_blank">
+                    <img src="assets/images/icon.svg">
+                </a>
+            </div>
         </div>
 
-        <!-- ACTIVITÉ 2 -->
-        <div class="activite">
-            <img src="assets/images/red-bull-basement-silicon-valley.avif" class="activite-img">
-            <h2>Red Bull Basement</h2>
+        <!-- COLONNE 2 -->
+        <div class="footer-col">
+            <h3>Contact</h3>
 
-            <p>
-            xxx
-            </p>
+            <div class="footer-contact">
+                <img src="assets/images/Mail_(Apple)_logo.png">
+                <p>
+                    <a href="mailto:racingteamisep@gmail.com">
+                        racingteamisep@gmail.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLONNE 3 -->
+        <div class="footer-col">
+            <h3>Racing Team ISEP</h3>
+            <p>Association de sport automobile</p>
         </div>
 
     </div>
-</section>
+
+    <div class="footer-bottom">
+        © 2026 Racing Team ISEP
+    </div>
+
+</footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
