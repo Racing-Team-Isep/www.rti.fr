@@ -1203,22 +1203,25 @@ a {
     border-radius: 12px;
     cursor: pointer;
     transition: 0.3s;
+
+    break-inside: avoid;
 }
 
 .gallery-img:hover {
     transform: scale(1.02);
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
     .gallery {
-        column-count: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-count: unset;
     }
 }
 
 @media (max-width: 500px) {
     .gallery {
-        column-count: 1;
+        grid-template-columns: 1fr;
     }
 }
 
