@@ -21,20 +21,22 @@
 
 <header>
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/logo_rti_transparent.png" alt="Logo Racing Team ISEP">
-            </a>
-        </div>
+    <div class="logo">
+        <a href="index.html" class="logo-link">
+            <img src="assets/images/logo_rti_transparent.png" alt="Logo RTI">
+        </a>
+    </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="equipe.html">Équipe</a></li>
-            <li><a href="activites.html">Activités</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="partenaires.html">Partenaires</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="equipe.html">Équipe</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="partenaires.html">Partenaires</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
     </nav>
 </header>
 
@@ -162,6 +164,10 @@ window.addEventListener("scroll", function() {
     const navbar = document.querySelector(".navbar");
     navbar.classList.toggle("scrolled", window.scrollY > 50);
 });
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
 </script>
 
 </body>
