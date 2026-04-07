@@ -2,8 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activités - RTI</title>
+
+    <!-- FONT INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" type="image/png" href="assets/images/logo_rti_transparent.png">
 </head>
 
@@ -13,8 +22,7 @@
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo_rti_transparent.png">
-                <span class="logo-text">Racing Team ISEP</span>
+                <img src="assets/images/logo_rti_transparent.png" alt="Logo RTI">
             </a>
         </div>
 
@@ -38,18 +46,16 @@
 <!-- CARTES -->
 <section class="activites-cards">
 
-    <!-- 6H EMOS -->
     <div class="card">
-        <img src="assets/images/affiche_6h_EMOS_RTI.png">
+        <img src="assets/images/affiche_6h_EMOS_RTI.png" alt="6H EMOS">
         <div class="card-content">
             <h2>6H EMOS</h2>
             <button onclick="openPopup('emos')">Voir plus</button>
         </div>
     </div>
 
-    <!-- RED BULL -->
     <div class="card">
-        <img src="assets/images/red-bull-basement-silicon-valley.avif">
+        <img src="assets/images/red-bull-basement-silicon-valley.avif" alt="Red Bull Basement">
         <div class="card-content">
             <h2>Red Bull Basement</h2>
             <button onclick="openPopup('redbull')">Voir plus</button>
@@ -58,75 +64,77 @@
 
 </section>
 
-<!-- POPUP 6H EMOS -->
+<!-- POPUP EMOS -->
 <div id="popup-emos" class="popup">
     <div class="popup-content">
+
         <span class="close" onclick="closePopup('emos')">&times;</span>
 
         <img src="assets/images/brochure_6H_EMOS.png" class="popup-img">
 
-        <h2>6H EMOS</h2><br>
+        <h2>6H EMOS</h2>
 
-        <p><strong>La Racing Team ISEP aux 6H EMOS</strong></p><br>
+        <p><strong>La Racing Team ISEP aux 6H EMOS</strong></p>
 
         <p>
-        La Racing Team ISEP a participé aux 6H EMOS, une course d’endurance inter-universitaire organisée par ESTACA Motorsport sur le circuit RKC Karting.
-        </p><br>
+        Course d’endurance inter-universitaire organisée par ESTACA Motorsport sur le circuit RKC Karting.
+        </p>
 
         <ul>
-            <li>Date : 28 mars 2026</li>
-            <li>Horaires : 13h – 21h</li>
-            <li>Lieu : Circuit RKC Karting</li>
-        </ul><br>
+            <li>28 mars 2026</li>
+            <li>13h – 21h</li>
+            <li>Circuit RKC Karting</li>
+        </ul>
 
         <p>
-        40 minutes de qualifications suivies de 6 heures de course d’endurance.  
+        40 minutes de qualifications suivies de 6 heures de course.  
         Événement retransmis sur Twitch.
-        </p><br>
+        </p>
 
         <ul>
-            <li>6 places disponibles</li>
-            <li>Tarif : 35 €</li>
-        </ul><br>
+            <li>6 places</li>
+            <li>35 €</li>
+        </ul>
 
         <p>
-        Présence de Red Bull avec distribution de canettes.  
-        Cette première course inter-universitaire restera un moment marquant pour la RTI.
-        </p><br>
-
-    </div>
-</div>
-
-<!-- POPUP RED BULL -->
-<div id="popup-redbull" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('redbull')">&times;</span>
-
-        <h2>Red Bull Basement</h2><br>
-
-        <p>
-        La Racing Team ISEP a relayé l’initiative Red Bull Basement, un programme international dédié aux étudiants qui souhaitent développer des projets innovants.
-        </p><br>
-
-        <ul>
-            <li>Date limite : 19 avril</li>
-            <li>Ouvert aux étudiants</li>
-            <li>Soumission d’un projet innovant</li>
-        </ul><br>
-
-        <p>
-        Un jury sélectionnera la meilleure idée pour représenter la France à la finale internationale à la Silicon Valley.
-        </p><br>
-
-        <p>
-        <a href="https://www.redbull.com/fr-fr/events/red-bull-basement-france-2026" target="_blank">
-            Accéder à l’événement
-        </a>
+        Présence de Red Bull et ambiance inter-universitaire exceptionnelle.
         </p>
 
     </div>
 </div>
 
+<!-- POPUP REDBULL -->
+<div id="popup-redbull" class="popup">
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup('redbull')">&times;</span>
+
+        <h2>Red Bull Basement</h2>
+
+        <p>
+        Programme international permettant aux étudiants de proposer des projets innovants.
+        </p>
+
+        <ul>
+            <li>Date limite : 19 avril</li>
+            <li>Ouvert à tous les étudiants</li>
+            <li>Projet innovant requis</li>
+        </ul>
+
+        <p>
+        Le gagnant représentera la France à la finale internationale en Silicon Valley.
+        </p>
+
+        <p>
+            <a href="https://www.redbull.com/fr-fr/events/red-bull-basement-france-2026" target="_blank">
+                Voir l’événement
+            </a>
+        </p>
+
+    </div>
+</div>
+
+<!-- SCRIPT -->
 <script>
 function openPopup(type) {
     document.getElementById("popup-" + type).style.display = "flex";
@@ -135,23 +143,29 @@ function openPopup(type) {
 function closePopup(type) {
     document.getElementById("popup-" + type).style.display = "none";
 }
-</script>
 
-<script>
-window.addEventListener("scroll", function() {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+// fermeture clic extérieur
+document.querySelectorAll(".popup").forEach(popup => {
+    popup.addEventListener("click", (e) => {
+        if (!e.target.closest(".popup-content")) {
+            popup.style.display = "none";
+        }
+    });
+});
+
+// fermeture ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        document.querySelectorAll(".popup").forEach(p => p.style.display = "none");
+    }
 });
 </script>
 
-
-<!-- NOUVEAU FOOTER MODERNE -->
-
+<!-- FOOTER -->
 <footer class="footer-modern">
 
     <div class="footer-container">
 
-        <!-- COLONNE 1 -->
         <div class="footer-col">
             <h3>Suivez-nous</h3>
             <div class="footer-icons">
@@ -164,10 +178,8 @@ window.addEventListener("scroll", function() {
             </div>
         </div>
 
-        <!-- COLONNE 2 -->
         <div class="footer-col">
             <h3>Contact</h3>
-
             <div class="footer-contact">
                 <img src="assets/images/Mail_(Apple)_logo.png">
                 <p>
@@ -176,10 +188,8 @@ window.addEventListener("scroll", function() {
                     </a>
                 </p>
             </div>
-
         </div>
 
-        <!-- COLONNE 3 -->
         <div class="footer-col">
             <h3>Racing Team ISEP</h3>
             <p>Association de sport automobile</p>

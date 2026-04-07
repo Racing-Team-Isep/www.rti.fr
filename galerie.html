@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie - RTI</title>
+
+    <!-- FONT INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,8 +21,7 @@
     <nav class="navbar">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo_rti_transparent.png">
-                <span class="logo-text">Racing Team ISEP</span>
+                <img src="assets/images/logo_rti_transparent.png" alt="Logo RTI">
             </a>
         </div>
 
@@ -30,7 +36,7 @@
     </nav>
 </header>
 
-<!-- TITLE -->
+<!-- HEADER -->
 <section class="gallery-header">
     <h1>Galerie</h1>
     <p>6H EMOS – Racing Team ISEP</p>
@@ -39,41 +45,43 @@
 <!-- GALLERY -->
 <section class="gallery">
 
-    <img src="assets/images/1.png" class="gallery-img">
-    <img src="assets/images/2IMG_9440.png" class="gallery-img">
-    <img src="assets/images/3IMG_9623.png" class="gallery-img">
-    <img src="assets/images/4IMG_0073.png" class="gallery-img">
-    <img src="assets/images/5IMG_0086.png" class="gallery-img">
-    <img src="assets/images/6IMG_9818.png" class="gallery-img">
-    <img src="assets/images/7IMG_9827.png" class="gallery-img">
-    <img src="assets/images/8IMG_9494.png" class="gallery-img">
-    <img src="assets/images/9IMG_9530.png" class="gallery-img">
-    <img src="assets/images/10IMG_9564.png" class="gallery-img">
-    <img src="assets/images/11IMG_9423.png" class="gallery-img">
-    <img src="assets/images/12IMG_9536.png" class="gallery-img">
-    <img src="assets/images/13IMG_9452.png" class="gallery-img">
-    <img src="assets/images/14MG_9587 (1).png" class="gallery-img">
-    <img src="assets/images/15IMG_9473.png" class="gallery-img">
-    <img src="assets/images/16IMG_9570.png" class="gallery-img">
-    <img src="assets/images/17IMG_9907.png" class="gallery-img">
-    <img src="assets/images/18IMG_9470.png" class="gallery-img">
-    <img src="assets/images/19IMG_9583.png" class="gallery-img">
-    <img src="assets/images/20IMG_9593 (1).png" class="gallery-img">
+    <img src="assets/images/1.png" class="gallery-img" alt="RTI 6H EMOS 1">
+    <img src="assets/images/2IMG_9440.png" class="gallery-img" alt="RTI 6H EMOS 2">
+    <img src="assets/images/3IMG_9623.png" class="gallery-img" alt="RTI 6H EMOS 3">
+    <img src="assets/images/4IMG_0073.png" class="gallery-img" alt="RTI 6H EMOS 4">
+    <img src="assets/images/5IMG_0086.png" class="gallery-img" alt="RTI 6H EMOS 5">
+    <img src="assets/images/6IMG_9818.png" class="gallery-img" alt="RTI 6H EMOS 6">
+    <img src="assets/images/7IMG_9827.png" class="gallery-img" alt="RTI 6H EMOS 7">
+    <img src="assets/images/8IMG_9494.png" class="gallery-img" alt="RTI 6H EMOS 8">
+    <img src="assets/images/9IMG_9530.png" class="gallery-img" alt="RTI 6H EMOS 9">
+    <img src="assets/images/10IMG_9564.png" class="gallery-img" alt="RTI 6H EMOS 10">
+    <img src="assets/images/11IMG_9423.png" class="gallery-img" alt="RTI 6H EMOS 11">
+    <img src="assets/images/12IMG_9536.png" class="gallery-img" alt="RTI 6H EMOS 12">
+    <img src="assets/images/13IMG_9452.png" class="gallery-img" alt="RTI 6H EMOS 13">
+    <img src="assets/images/14MG_9587 (1).png" class="gallery-img" alt="RTI 6H EMOS 14">
+    <img src="assets/images/15IMG_9473.png" class="gallery-img" alt="RTI 6H EMOS 15">
+    <img src="assets/images/16IMG_9570.png" class="gallery-img" alt="RTI 6H EMOS 16">
+    <img src="assets/images/17IMG_9907.png" class="gallery-img" alt="RTI 6H EMOS 17">
+    <img src="assets/images/18IMG_9470.png" class="gallery-img" alt="RTI 6H EMOS 18">
+    <img src="assets/images/19IMG_9583.png" class="gallery-img" alt="RTI 6H EMOS 19">
+    <img src="assets/images/20IMG_9593 (1).png" class="gallery-img" alt="RTI 6H EMOS 20">
 
 </section>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
     <span class="close">&times;</span>
-    <img class="lightbox-img" id="lightbox-img">
+    <img class="lightbox-img" id="lightbox-img" alt="Image agrandie">
 </div>
 
+<!-- SCRIPT -->
 <script>
 const images = document.querySelectorAll('.gallery-img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
-const close = document.querySelector('.close');
+const close = document.querySelector('.lightbox .close');
 
+// OUVERTURE
 images.forEach(img => {
     img.addEventListener('click', () => {
         lightbox.style.display = 'flex';
@@ -81,52 +89,56 @@ images.forEach(img => {
     });
 });
 
+// FERMETURE CROIX
 close.addEventListener('click', () => {
     lightbox.style.display = 'none';
 });
 
+// FERMETURE BACKGROUND
 lightbox.addEventListener('click', (e) => {
     if (e.target !== lightboxImg) {
         lightbox.style.display = 'none';
     }
 });
+
+// FERMETURE ESC (UX PREMIUM)
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        lightbox.style.display = 'none';
+    }
+});
 </script>
 
-<!-- NOUVEAU FOOTER MODERNE -->
-
+<!-- FOOTER -->
 <footer class="footer-modern">
 
     <div class="footer-container">
 
-        <!-- COLONNE 1 -->
         <div class="footer-col">
             <h3>Suivez-nous</h3>
             <div class="footer-icons">
                 <a href="https://instagram.com/racingteamisep" target="_blank">
-                    <img src="assets/images/Instagram_icon.png">
+                    <img src="assets/images/Instagram_icon.png" alt="Instagram">
                 </a>
                 <a href="https://iseplife.fr/club/378238" target="_blank">
-                    <img src="assets/images/icon.svg">
+                    <img src="assets/images/icon.svg" alt="ISEP Life">
                 </a>
             </div>
         </div>
 
-        <!-- COLONNE 2 -->
         <div class="footer-col">
             <h3>Contact</h3>
 
             <div class="footer-contact">
-                <img src="assets/images/Mail_(Apple)_logo.png">
+                <img src="assets/images/Mail_(Apple)_logo.png" alt="Mail">
                 <p>
                     <a href="mailto:racingteamisep@gmail.com">
                         racingteamisep@gmail.com
                     </a>
                 </p>
             </div>
-
         </div>
 
-        <!-- COLONNE 3 -->
         <div class="footer-col">
             <h3>Racing Team ISEP</h3>
             <p>Association de sport automobile</p>
@@ -140,6 +152,7 @@ lightbox.addEventListener('click', (e) => {
 
 </footer>
 
+<!-- NAVBAR SCROLL -->
 <script>
 window.addEventListener("scroll", function() {
     const navbar = document.querySelector(".navbar");

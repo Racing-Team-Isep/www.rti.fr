@@ -9,8 +9,8 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    padding-top: 80px;
+    font-family: 'Inter', sans-serif;
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     background: #f8f9fc;
@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: 90px;
 
     display: flex;
     align-items: center;
@@ -31,55 +31,50 @@ body {
 
     padding: 0 50px;
 
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    backdrop-filter: blur(4px);
 
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
-/* effet scroll */
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.95);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.35);
 }
 
 /* LOGO */
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
+.logo img {
+    height: 70px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
+    transition: 0.3s;
 }
 
-.logo img {
-    height: 50px;
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .logo-text {
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1px;
+    display: none;
 }
 
-/* MENU */
 .nav-links {
     display: flex;
     gap: 40px;
     list-style: none;
 }
 
+/* MENU */
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 15px;
     position: relative;
     transition: 0.3s;
-    letter-spacing: 0.5px;
 }
 
-/* underline racing */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -87,7 +82,7 @@ body {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background: #6081cf;
+    background: white;
     transition: 0.3s;
 }
 
@@ -96,11 +91,12 @@ body {
 }
 
 .nav-links a:hover {
-    color: #6081cf;
+    opacity: 0.7;
 }
 
+
 .hero {
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 90px);
     background: url("assets/images/IMG_9591.png") no-repeat center center/cover;
     position: relative;
     display: flex;
@@ -131,15 +127,17 @@ body {
 }
 
 .hero-logo {
-    width: 170px;
+    width: 190px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
 }
 
 .hero h1 {
     font-size: 56px;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
+
 
 .hero-subtitle {
     font-size: 22px;
@@ -655,7 +653,7 @@ a {
 }
 
 .logo-text {
-    color: white;
+    display: none;
 }
 
 .activites {
@@ -728,11 +726,11 @@ a {
         text-align: center;
     }
     .hero h1 {
-    font-size: 42px;
+    font-size: 28px;
 }
 
     .hero-subtitle {
-    font-size: 18px;
+    font-size: 16px;
     }
 }
 
@@ -751,8 +749,7 @@ a {
     }
 
     .nav-links {
-        gap: 12px;
-        font-size: 14px;
+    display: none;
     }
 
     .team-hero {
@@ -778,11 +775,15 @@ a {
     .hero-buttons {
     flex-direction: column;
     align-items: center;
-}
+    }
 
     .hero-btn {
     width: 90%;
     max-width: 280px;
+    }
+
+    .hero {
+    min-height: calc(100vh - 70px);
     }
 }
 
@@ -984,8 +985,10 @@ a {
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding: 80px 20px;
+    padding: 80px 40px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .card {
@@ -1036,37 +1039,44 @@ a {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.75);
     justify-content: center;
     align-items: center;
     z-index: 2000;
+    padding: 20px;
 }
 
 .popup-content {
     background: white;
-    padding: 30px;
-    width: 90%;
-    max-width: 700px;
-    border-radius: 20px;
+    padding: 35px;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 25px;
     position: relative;
-    max-height: 80vh;
+    max-height: 85vh;
     overflow-y: auto;
 }
 
 .popup-img {
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .popup .close {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 28px;
-    color: black;
     cursor: pointer;
-    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* FOOTER MODERNE */
@@ -1230,4 +1240,16 @@ a {
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+body {
+    overflow-x: hidden;
 }
