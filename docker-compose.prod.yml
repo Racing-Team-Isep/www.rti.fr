@@ -1,0 +1,21 @@
+services:
+  rti:
+    container_name: rti-website
+    image: ghcr.io/racing-team-isep/www.rti.fr:v1
+    environment:
+      - NGINX_HOST=127.0.0.1
+      - NGINX_PORT=80
+    volumes:
+      #- "./assets:/usr/share/nginx/html/assets" 
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rti.rule=Host(`rti.garageisep.com`)"
+      - "traefik.http.routers.rti.entrypoints=websecure"
+      - "traefik.http.routers.rti.tls.certresolver=myresolver"
+      - "traefik.http.services.rti.loadbalancer.server.port=80"
+
+networks:
+  traefik-net:
+    external: true
