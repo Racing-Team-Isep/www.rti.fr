@@ -1,7 +1,7 @@
 services:
   rti:
     container_name: rti-website
-    image: ghcr.io/racing-team-isep/www.rti.fr:v1
+    image: ghcr.io/racing-team-isep/www.rti.fr:latest
     environment:
       - NGINX_HOST=127.0.0.1
       - NGINX_PORT=80
